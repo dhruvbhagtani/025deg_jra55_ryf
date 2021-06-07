@@ -304,6 +304,12 @@ ACCESS-OM2-025
 "ocean-2d-net_sfc_heating-1-daily-snap-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "years"
 "ocean_model", "net_sfc_heating", "net_sfc_heating", "ocean-2d-net_sfc_heating-1-daily-snap-ym%4yr%2mo", "all", "none", "none", 2
 
+"ocean-2d-surface_salt-1-daily-snap-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "years"
+"ocean_model", "surface_salt", "surface_salt", "ocean-2d-surface_salt-1-daily-snap-ym%4yr%2mo", "all", "none", "none", 2
+
+"ocean-2d-surface_temp-1-daily-snap-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "years"
+"ocean_model", "surface_temp", "surface_temp", "ocean-2d-surface_temp-1-daily-snap-ym%4yr%2mo", "all", "none", "none", 2
+
 
 # daily 3d snapshots
 

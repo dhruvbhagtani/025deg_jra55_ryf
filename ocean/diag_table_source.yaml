@@ -271,6 +271,8 @@ diag_table:
             hblt:
             ustar:
             net_sfc_heating:
+            surface_salt:
+            surface_temp:
     'daily 3d snapshots':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 3d  # descriptor for filename, e.g. 3d, 2d, scalar
