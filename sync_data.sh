@@ -2,8 +2,8 @@
 #PBS -q copyq
 #PBS -l ncpus=1
 #PBS -l wd
-#PBS -l walltime=4:00:00,mem=4GB
-#PBS -l storage=gdata/hh5+gdata/ik11+scratch/v45+scratch/x77+scratch/g40+gdata/e14+scratch/e14
+#PBS -l walltime=10:00:00,mem=12GB
+#PBS -l storage=gdata/hh5+gdata/ik11+gdata/cj50+scratch/v45+scratch/x77+scratch/g40+gdata/x77
 #PBS -N sync
 
 # Set SYNCDIR to the path you want your data copied to.
@@ -16,8 +16,8 @@ SYNCDIR=/g/data/x77/db6174/access-om2/archive/025deg_jra55_ryf_param_kpp3
 
 exitcode=0
 help=false
-dirtype=restart #output
-exclude="--exclude *.nc.*"
+dirtype=output
+exclude="--exclude *.nc.* --exclude iceh.????-??-??.nc --exclude *-DEPRECATED --exclude *-DELETE --exclude *-IN-PROGRESS"
 rsyncflags="-vrltoD --safe-links"
 rmlocal=false
 backward=false
@@ -41,7 +41,7 @@ while [ $# -ge 1 ]; do
             backward=true
             ;;
         -D)
-        # --remove-source-files tells rsync to remove from the sending side the files (meaning non-directories) 
+        # --remove-source-files tells rsync to remove from the sending side the files (meaning non-directories)
         # that are a part of the transfer and have been successfully duplicated on the receiving side.
         # This option should only be used on source files that are quiescent.
         # Require interaction here to avoid syncing and removing partially-written files.
@@ -83,8 +83,34 @@ if [ $exitcode != "0" -o $help == true ]; then
     exit $exitcode
 fi
 
+
+# concatenate ice daily files
+module load nco
+for d in archive/output*/ice/OUTPUT; do
+    for f in $d/iceh.????-??-01.nc; do
+        if [[ ! -f ${f/-01.nc/-IN-PROGRESS} ]] && [[ ! -f ${f/-01.nc/-daily.nc} ]];
+        then
+            touch ${f/-01.nc/-IN-PROGRESS}
+            echo "doing ncrcat -O -L 5 -7 ${f/-01.nc/-??.nc} ${f/-01.nc/-daily.nc}"
+            ncrcat -O -L 5 -7 ${f/-01.nc/-??.nc} ${f/-01.nc/-daily.nc} && chmod g+r ${f/-01.nc/-daily.nc} && rm ${f/-01.nc/-IN-PROGRESS}
+            if [[ ! -f ${f/-01.nc/-IN-PROGRESS} ]] && [[ -f ${f/-01.nc/-daily.nc} ]];
+            then
+                for daily in ${f/-01.nc/-??.nc}
+                do
+                    # mv $daily $daily-DELETE  # rename individual daily files - user to delete
+                    rm $daily
+                done
+            else
+                rm ${f/-01.nc/-IN-PROGRESS}
+            fi
+        fi
+    done
+done
+
+
 sourcepath="$PWD"
 mkdir -p $SYNCDIR || { echo "Error: cannot create $SYNCDIR - edit $0 to set SYNCDIR"; exit 1; }
+
 cd archive || exit 1
 
 # copy all outputs/restarts
@@ -108,6 +134,9 @@ else
     if [ $rmlocal == true ]; then
         # Now do removals. Don't remove final local copy, so we can continue run.
         rsync --remove-source-files --exclude `\ls -1d ${dirtype}[0-9][0-9][0-9] | tail -1` $exclude $rsyncflags ${dirtype}[0-9][0-9][0-9] $SYNCDIR
+        for d in ${dirtype}[0-9][0-9][0-9]/ice/OUTPUT; do
+            rm $d/iceh.????-??-??.nc-DELETE
+        done
     fi
     # Also sync error and PBS logs and metadata.yaml and run summary
     rsync $rsyncflags error_logs $SYNCDIR
