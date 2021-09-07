@@ -520,6 +520,10 @@
     smooth_blmc       = .false.
     smooth_ri_kmax_eq_kmu = .true.
     use_this_module   = .true.
+    dVsq_param        = .true.
+    u_coeff_a         = 80.0
+    u_coeff_b         = 1.0
+    exp_coeff         = -0.01
     visc_cbu_iw       = 0.0
 /
 
@@ -532,10 +536,6 @@
     hwf_n0_2omega     = 20.0
     use_diff_cbt_table = .false.
     vert_diff_back_via_max = .true.
-    dVsq_param        = .true.
-    u_coeff_a         = 80.0
-    u_coeff_b         = 1.0
-    exp_coeff         = -0.01
     vert_mix_scheme   = 'kpp_mom4p1'
 /
 
