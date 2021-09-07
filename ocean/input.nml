@@ -584,7 +584,7 @@
 /
 
 &wind_mask_nml
-    user_this_modlue = .false.
+    use_this_module = .true.
 /
 
 &xgrid_nml
