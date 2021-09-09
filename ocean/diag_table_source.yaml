@@ -167,6 +167,7 @@ diag_table:
             salt:
             wt:
             Vtsq_array:
+            wmask:
     'monthly 3d fields':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 3d  # descriptor for filename, e.g. 3d, 2d, scalar
