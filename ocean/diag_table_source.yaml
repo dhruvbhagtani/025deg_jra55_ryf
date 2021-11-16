@@ -139,9 +139,9 @@ diag_table:
             output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
             output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
         fields:
-            age_global:
+            # age_global:
             # aiso_bih:
-            buoyfreq2_wt:
+            # buoyfreq2_wt:
             diff_cbt_t:
             dzt:  # potentially calculable from other fields - https://github.com/COSIMA/access-om2/issues/203#issuecomment-635752170
             pot_rho_0:
@@ -156,13 +156,13 @@ diag_table:
             # tx_trans_rho_gm:
             # tx_trans_rho:
             # tx_trans_submeso:
-#            tx_trans:
+            tx_trans:
 #            ty_trans_gm:
-            ty_trans_nrho_submeso:
-            ty_trans_rho_gm:
-            ty_trans_rho:
+            #ty_trans_nrho_submeso:
+            #ty_trans_rho_gm:
+            # ty_trans_rho:
 #            ty_trans_submeso:
-#            ty_trans:
+            ty_trans:
             u:
             v:
             vert_pv:
@@ -175,20 +175,20 @@ diag_table:
             output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
             reduction_method: pow02  # mean, snap, rms, pow##, min, max, or diurnal##
         fields:
-            u:
-            v:
+            #u:
+            #v:
     'monthly 2d fields':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
             output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
             output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
         fields:
-            agm:
-            aredi:
-            bmf_u:
-            bmf_v:
-            ekman_we:
-            eta_nonbouss:
+            #agm:
+            # aredi:
+            #bmf_u:
+            #bmf_v:
+            #ekman_we:
+            #eta_nonbouss:
             evap_heat:
             evap:
             fprec_melt_heat:
@@ -206,7 +206,7 @@ diag_table:
             pme_river:
             river:
             runoff:
-            sea_level_sq:
+            #sea_level_sq:
             sea_level:
             sens_heat:
             sfc_hflux_coupler:
@@ -220,15 +220,15 @@ diag_table:
             swflx:
             tau_x:
             tau_y:
-            temp_int_rhodz:
-            temp_xflux_adv_int_z:
-            temp_xflux_gm_int_z:
-            temp_xflux_ndiffuse_int_z:
-            temp_xflux_submeso_int_z:
-            temp_yflux_adv_int_z:
-            temp_yflux_gm_int_z:
-            temp_yflux_ndiffuse_int_z:
-            temp_yflux_submeso_int_z:
+            #temp_int_rhodz:
+            #temp_xflux_adv_int_z:
+            #temp_xflux_gm_int_z:
+            #temp_xflux_ndiffuse_int_z:
+            #temp_xflux_submeso_int_z:
+            #temp_yflux_adv_int_z:
+            #temp_yflux_gm_int_z:
+            #temp_yflux_ndiffuse_int_z:
+            #temp_yflux_submeso_int_z:
             tx_trans_int_z:
             ty_trans_int_z:
             wfiform:
@@ -249,15 +249,15 @@ diag_table:
         fields:
             # bottom_temp:
             # frazil_3d_int_z:
-            mld:
-            hblt:
+            #mld:
+            #hblt:
             # pme_river:
-            sea_level:
+            #sea_level:
             # sfc_hflux_coupler:
             # sfc_hflux_from_runoff:
             # sfc_hflux_pme:
-            surface_salt:
-            surface_temp:
+            #surface_salt:
+            #surface_temp:
             # usurf:
             # vsurf:
             # vorticity_z_surf:

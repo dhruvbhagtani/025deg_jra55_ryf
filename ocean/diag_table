@@ -58,12 +58,6 @@ ACCESS-OM2-025
 
 # monthly 3d fields
 
-"ocean-3d-age_global-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "age_global", "age_global", "ocean-3d-age_global-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-buoyfreq2_wt-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "buoyfreq2_wt", "buoyfreq2_wt", "ocean-3d-buoyfreq2_wt-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
 "ocean-3d-diff_cbt_t-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "diff_cbt_t", "diff_cbt_t", "ocean-3d-diff_cbt_t-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
@@ -82,14 +76,11 @@ ACCESS-OM2-025
 "ocean-3d-temp-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "temp", "temp", "ocean-3d-temp-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
-"ocean-3d-ty_trans_nrho_submeso-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "ty_trans_nrho_submeso", "ty_trans_nrho_submeso", "ocean-3d-ty_trans_nrho_submeso-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
+"ocean-3d-tx_trans-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model", "tx_trans", "tx_trans", "ocean-3d-tx_trans-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
-"ocean-3d-ty_trans_rho_gm-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "ty_trans_rho_gm", "ty_trans_rho_gm", "ocean-3d-ty_trans_rho_gm-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-ty_trans_rho-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "ty_trans_rho", "ty_trans_rho", "ocean-3d-ty_trans_rho-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
+"ocean-3d-ty_trans-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model", "ty_trans", "ty_trans", "ocean-3d-ty_trans-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
 "ocean-3d-u-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "u", "u", "ocean-3d-u-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
@@ -106,32 +97,8 @@ ACCESS-OM2-025
 
 # monthly 3d squared fields
 
-"ocean-3d-u-1-monthly-pow02-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "u", "u", "ocean-3d-u-1-monthly-pow02-ym%4yr%2mo", "all", "pow02", "none", 2
-
-"ocean-3d-v-1-monthly-pow02-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "v", "v", "ocean-3d-v-1-monthly-pow02-ym%4yr%2mo", "all", "pow02", "none", 2
-
 
 # monthly 2d fields
-
-"ocean-2d-agm-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "agm", "agm", "ocean-2d-agm-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-aredi-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "aredi", "aredi", "ocean-2d-aredi-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-bmf_u-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "bmf_u", "bmf_u", "ocean-2d-bmf_u-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-bmf_v-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "bmf_v", "bmf_v", "ocean-2d-bmf_v-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-ekman_we-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "ekman_we", "ekman_we", "ocean-2d-ekman_we-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-eta_nonbouss-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "eta_nonbouss", "eta_nonbouss", "ocean-2d-eta_nonbouss-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
 "ocean-2d-evap_heat-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "evap_heat", "evap_heat", "ocean-2d-evap_heat-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
@@ -184,9 +151,6 @@ ACCESS-OM2-025
 "ocean-2d-runoff-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "runoff", "runoff", "ocean-2d-runoff-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
-"ocean-2d-sea_level_sq-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "sea_level_sq", "sea_level_sq", "ocean-2d-sea_level_sq-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
 "ocean-2d-sea_level-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "sea_level", "sea_level", "ocean-2d-sea_level-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
@@ -226,33 +190,6 @@ ACCESS-OM2-025
 "ocean-2d-tau_y-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "tau_y", "tau_y", "ocean-2d-tau_y-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
-"ocean-2d-temp_int_rhodz-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "temp_int_rhodz", "temp_int_rhodz", "ocean-2d-temp_int_rhodz-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-temp_xflux_adv_int_z-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "temp_xflux_adv_int_z", "temp_xflux_adv_int_z", "ocean-2d-temp_xflux_adv_int_z-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-temp_xflux_gm_int_z-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "temp_xflux_gm_int_z", "temp_xflux_gm_int_z", "ocean-2d-temp_xflux_gm_int_z-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-temp_xflux_ndiffuse_int_z-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "temp_xflux_ndiffuse_int_z", "temp_xflux_ndiffuse_int_z", "ocean-2d-temp_xflux_ndiffuse_int_z-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-temp_xflux_submeso_int_z-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "temp_xflux_submeso_int_z", "temp_xflux_submeso_int_z", "ocean-2d-temp_xflux_submeso_int_z-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-temp_yflux_adv_int_z-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "temp_yflux_adv_int_z", "temp_yflux_adv_int_z", "ocean-2d-temp_yflux_adv_int_z-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-temp_yflux_gm_int_z-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "temp_yflux_gm_int_z", "temp_yflux_gm_int_z", "ocean-2d-temp_yflux_gm_int_z-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-temp_yflux_ndiffuse_int_z-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "temp_yflux_ndiffuse_int_z", "temp_yflux_ndiffuse_int_z", "ocean-2d-temp_yflux_ndiffuse_int_z-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-temp_yflux_submeso_int_z-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
-"ocean_model", "temp_yflux_submeso_int_z", "temp_yflux_submeso_int_z", "ocean-2d-temp_yflux_submeso_int_z-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
 "ocean-2d-tx_trans_int_z-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "tx_trans_int_z", "tx_trans_int_z", "ocean-2d-tx_trans_int_z-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
@@ -276,21 +213,6 @@ ACCESS-OM2-025
 
 
 # daily 2d fields
-
-"ocean-2d-mld-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "years"
-"ocean_model", "mld", "mld", "ocean-2d-mld-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-hblt-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "years"
-"ocean_model", "hblt", "hblt", "ocean-2d-hblt-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-sea_level-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "years"
-"ocean_model", "sea_level", "sea_level", "ocean-2d-sea_level-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-surface_salt-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "years"
-"ocean_model", "surface_salt", "surface_salt", "ocean-2d-surface_salt-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-surface_temp-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "years"
-"ocean_model", "surface_temp", "surface_temp", "ocean-2d-surface_temp-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
 
 
 # daily 2d maximum fields
