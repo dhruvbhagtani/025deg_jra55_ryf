@@ -13,9 +13,7 @@ shortpath: /scratch/x77
 # Model configuration
 name: common
 model: mom
-input: /scratch/x77/db6174/MoM5/exec/nci/MOM_solo/fms_MOM_solo.x
-model: mom
-exe: /g/data/ik11/inputs/access-om2/bin/fms_ACCESS-OM_e837d05d_libaccessom2_4198e150.x
+exe: /scratch/x77/db6174/MoM5/exec/nci/MOM_solo/fms_MOM_solo.x
 input: 
      - /g/data/ik11/inputs/access-om2/input_20200530/mom_025deg/
      - /scratch/x77/db6174/025deg_inputs/flux_forced_3hourly
