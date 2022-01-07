@@ -195,6 +195,7 @@
       barotropic_split = 80
       cmip_units=.true.
       debug=.false.
+      dt_ocean = 1080
       layout = 48,40
       io_layout = 6,5
 /
