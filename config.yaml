@@ -2,21 +2,20 @@
 # If submitting to a different project to your default uncomment line below 
 # and change project code as appropriate
 project: x77
+
+shortpath: /scratch/x77
+
 queue: normal
+ncpus: 1455
 walltime: 5:00:00
 jobname: 025_flux_forced
-ncpus: 1455
-
-# Force payu to always find, and save, files in this short (or scratch) project directory
-shortpath: /scratch/x77
 
 # Model configuration
 model: mom
 exe: /scratch/x77/db6174/MoM5/exec/nci/MOM_solo/fms_MOM_solo.x
-inputs: 
-    - /g/data/ik11/inputs/access-om2/input_20201102/mom_025deg
-    - /scratch/x77/db6174/025deg_inputs/flux_forced_3hourly
-    - /home/156/db6174/MOM5/025deg_jra55_ryf_flux_forced_3hourly/grid_spec
+inputs:
+     - /g/data/ik11/inputs/access-om2/input_20201102/mom_025deg
+     - /scratch/x77/db6174/025deg_inputs/flux_forced_3hourly
 # Collation
 collate:
   walltime: 1:00:00
