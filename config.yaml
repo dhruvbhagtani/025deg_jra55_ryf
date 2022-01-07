@@ -1,40 +1,24 @@
 # PBS configuration
 # If submitting to a different project to your default uncomment line below 
 # and change project code as appropriate
-# project: w35
+project: x77
 queue: normal
 walltime: 5:00:00
-jobname: 025deg_jra55_ryf
+jobname: 025_flux_forced
 ncpus: 1824
 
 # Force payu to always find, and save, files in this short (or scratch) project directory
-# shortpath: /scratch/w35
+shortpath: /scratch/x77
 
 # Model configuration
 name: common
-model: access-om2
-input: /g/data/ik11/inputs/access-om2/input_236a3011/common_025deg_jra55
-submodels:
-    - name: atmosphere
-      model: yatm
-      exe: /g/data/ik11/inputs/access-om2/bin/yatm_4198e150.exe
-      input: 
-            - /g/data/ik11/inputs/access-om2/input_236a3011/yatm_025deg
-            - /g/data/ua8/JRA55-do/RYF/v1-3/
-      ncpus: 1
-
-    - name: ocean
-      model: mom
-      exe: /g/data/ik11/inputs/access-om2/bin/fms_ACCESS-OM_e837d05d_libaccessom2_4198e150.x
-      input: /g/data/ik11/inputs/access-om2/input_236a3011/mom_025deg
-      ncpus: 1455
-
-    - name: ice
-      model: cice5
-      exe: /g/data/ik11/inputs/access-om2/bin/cice_auscom_1440x1080_480p_597e4561_libaccessom2_4198e150.exe
-      input: /g/data/ik11/inputs/access-om2/input_236a3011/cice_025deg
-      ncpus: 361
-
+model: mom
+input: /scratch/x77/db6174/MoM5/exec/nci/MOM_solo/fms_MOM_solo.x
+model: mom
+exe: /g/data/ik11/inputs/access-om2/bin/fms_ACCESS-OM_e837d05d_libaccessom2_4198e150.x
+input: 
+     - /g/data/ik11/inputs/access-om2/input_20200530/mom_025deg/
+     - /scratch/x77/db6174/025deg_inputs/flux_forced_3hourly
 # Collation
 collate:
   walltime: 1:00:00
