@@ -38,6 +38,9 @@
  &diag_manager_nml
       debug_diag_manager=.false.
       issue_oor_warnings=.true.
+      max_axes          = 400
+      max_files         = 200
+      max_num_axis_sets = 200
 /
 
  &ocean_barotropic_nml
