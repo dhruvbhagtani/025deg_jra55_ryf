@@ -5,7 +5,7 @@ project: x77
 queue: normal
 walltime: 5:00:00
 jobname: 025_flux_forced
-ncpus: 1824
+ncpus: 1455
 
 # Force payu to always find, and save, files in this short (or scratch) project directory
 shortpath: /scratch/x77
