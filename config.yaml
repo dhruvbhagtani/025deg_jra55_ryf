@@ -13,11 +13,12 @@ jobname: 025_flux_forced
 # Model configuration
 model: mom
 exe: /scratch/x77/db6174/MoM5/exec/nci/MOM_solo/fms_MOM_solo.x
-inputs:
-     - /g/data/ik11/inputs/access-om2/input_20201102/mom_025deg
-     - /scratch/x77/db6174/025deg_inputs/flux_forced_3hourly
+input:
+     - /g/data/ik11/inputs/access-om2/input_20201102/mom_1deg
+
 # Collation
 collate:
+  restart: true
   walltime: 1:00:00
   mem: 30GB
   ncpus: 4
