@@ -15,7 +15,7 @@
 global_defaults:
 # global_section:
     title: ACCESS-OM2-025  # any string
-    base_date: [ 1900, 1, 1, 0, 0, 0 ]  # reference time used for the time units. six integers: year, month, day, hour, minute, second
+    base_date: [ 2000, 1, 1, 0, 0, 0 ]  # reference time used for the time units. six integers: year, month, day, hour, minute, second
 # file section:
     file_name:  # file name (without trailing ".nc") is constructed from these components,
     # separated by file_name_separator, as per https://github.com/COSIMA/access-om2/issues/185
@@ -133,6 +133,25 @@ diag_table:
             hu:
             kmt:
             kmu:
+    '3 hourly 2d fields':
+        defaults:  # these can be overridden for individual fields below
+            file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
+            output_freq: 3  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
+            output_freq_units: hours  # time units for output: years, months, days, hours, minutes, or seconds
+        fields:
+            tau_x:
+            tau_y:
+            sw_flux_vis_dir:
+            sw_flux_vis_dif:
+            sw_flux_nir_dir:
+            sw_flux_nir_dif:
+            lw_heat:
+            sens_heat:
+            evap:
+            runoff:
+            lprec:
+            fprec:
+            sfc_salt_flux_coupler:
     'monthly 3d fields':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 3d  # descriptor for filename, e.g. 3d, 2d, scalar
@@ -141,7 +160,7 @@ diag_table:
         fields:
             age_global:
             # aiso_bih:
-            buoyfreq2_wt:
+            #buoyfreq2_wt:
             diff_cbt_t:
             dzt:  # potentially calculable from other fields - https://github.com/COSIMA/access-om2/issues/203#issuecomment-635752170
             pot_rho_0:
@@ -175,20 +194,20 @@ diag_table:
             output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
             reduction_method: pow02  # mean, snap, rms, pow##, min, max, or diurnal##
         fields:
-            u:
-            v:
+            #u:
+            #v:
     'monthly 2d fields':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
             output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
             output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
         fields:
-            agm:
-            aredi:
-            bmf_u:
-            bmf_v:
-            ekman_we:
-            eta_nonbouss:
+            #agm:
+            #aredi:
+            #bmf_u:
+            #bmf_v:
+            #ekman_we:
+            #eta_nonbouss:
             evap_heat:
             evap:
             fprec_melt_heat:
@@ -206,7 +225,7 @@ diag_table:
             pme_river:
             river:
             runoff:
-            sea_level_sq:
+            #sea_level_sq:
             sea_level:
             sens_heat:
             sfc_hflux_coupler:
@@ -215,20 +234,20 @@ diag_table:
             sfc_salt_flux_coupler:
             sfc_salt_flux_ice:
             sfc_salt_flux_restore:
-            surface_salt:
-            surface_temp:
+            #surface_salt:
+            #surface_temp:
             swflx:
             tau_x:
             tau_y:
-            temp_int_rhodz:
-            temp_xflux_adv_int_z:
-            temp_xflux_gm_int_z:
-            temp_xflux_ndiffuse_int_z:
-            temp_xflux_submeso_int_z:
-            temp_yflux_adv_int_z:
-            temp_yflux_gm_int_z:
-            temp_yflux_ndiffuse_int_z:
-            temp_yflux_submeso_int_z:
+            #temp_int_rhodz:
+            #temp_xflux_adv_int_z:
+            #temp_xflux_gm_int_z:
+            #temp_xflux_ndiffuse_int_z:
+            #temp_xflux_submeso_int_z:
+            #temp_yflux_adv_int_z:
+            #temp_yflux_gm_int_z:
+            #temp_yflux_ndiffuse_int_z:
+            #temp_yflux_submeso_int_z:
             tx_trans_int_z:
             ty_trans_int_z:
             wfiform:
@@ -239,8 +258,8 @@ diag_table:
             output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
             output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
         fields:
-            mld: {reduction_method: max}  # max avoids spurious small values due to rainfall
-            surface_temp: {reduction_method: min}  # min for comparison with foundation temperature
+            #mld: {reduction_method: max}  # max avoids spurious small values due to rainfall
+            #surface_temp: {reduction_method: min}  # min for comparison with foundation temperature
     'daily 2d fields':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
@@ -249,15 +268,15 @@ diag_table:
         fields:
             # bottom_temp:
             # frazil_3d_int_z:
-            mld:
-            hblt:
+            #mld:
+            #hblt:
             # pme_river:
-            sea_level:
+            #sea_level:
             # sfc_hflux_coupler:
             # sfc_hflux_from_runoff:
             # sfc_hflux_pme:
-            surface_salt:
-            surface_temp:
+            #surface_salt:
+            #surface_temp:
             # usurf:
             # vsurf:
             # vorticity_z_surf:
@@ -268,11 +287,11 @@ diag_table:
             output_freq_units: days  # time units for output: years, months, days, hours, minutes, or seconds
             reduction_method: snap  # mean, snap, rms, pow##, min, max, or diurnal##
         fields:
-            hblt:
-            ustar:
-            net_sfc_heating:
-            surface_salt:
-            surface_temp:
+            #hblt:
+            #ustar:
+            #net_sfc_heating:
+            #surface_salt:
+            #surface_temp:
     'daily 3d snapshots':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 3d  # descriptor for filename, e.g. 3d, 2d, scalar
@@ -280,7 +299,7 @@ diag_table:
             output_freq_units: days  # time units for output: years, months, days, hours, minutes, or seconds
             reduction_method: snap  # mean, snap, rms, pow##, min, max, or diurnal##
         fields:
-            dVsq:
+            #dVsq:
     'daily 2d maximum fields':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
