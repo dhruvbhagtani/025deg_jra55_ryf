@@ -1,5 +1,5 @@
 ACCESS-OM2-025
-2000 1 1 0 0 0
+2100 1 1 0 0 0
 
 #########################################################################################################
 #                                                                                                       #
@@ -210,9 +210,6 @@ ACCESS-OM2-025
 
 
 # daily 2d fields
-
-"ocean-2d-hblt-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "years"
-"ocean_model", "hblt", "hblt", "ocean-2d-hblt-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
 
 "ocean-2d-surface_salt-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "years"
 "ocean_model", "surface_salt", "surface_salt", "ocean-2d-surface_salt-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
