@@ -119,8 +119,13 @@ work/INPUT/salt_sfc_restore.nc:
 work/INPUT/sens_heat.nc:
   fullpath: /scratch/x77/db6174/025deg_inputs/flux_forced_3hourly_20yr_avg/sens_heat.nc
   hashes:
-    binhash: 9c18552004d326a9c4dab06d115d90e5
-    md5: 8bfbf57b833336427d4970bcdc115a39
+    binhash: 6ffcdf09a3ee35bd37c3a8845e565d5f
+    md5: 7855c5a5514059fbdc3ad3240edfcac9
+work/INPUT/sens_heat_new.nc:
+  fullpath: /scratch/x77/db6174/025deg_inputs/flux_forced_3hourly_20yr_avg/sens_heat_new.nc
+  hashes:
+    binhash: 510d4571baa308d4e48ae828f0736042
+    md5: 29927f7a6dd1f070e3d62f893b4f26f1
 work/INPUT/sfc_salt_flux_coupler.nc:
   fullpath: /scratch/x77/db6174/025deg_inputs/flux_forced_3hourly_20yr_avg/sfc_salt_flux_coupler.nc
   hashes:
@@ -144,8 +149,13 @@ work/INPUT/sw_flux_nir_dif_new.nc:
 work/INPUT/sw_flux_nir_dir.nc:
   fullpath: /scratch/x77/db6174/025deg_inputs/flux_forced_3hourly_20yr_avg/sw_flux_nir_dir.nc
   hashes:
-    binhash: 9d9a5049dcd10f1aec82b0014ae8d0e9
-    md5: 8bfbf57b833336427d4970bcdc115a39
+    binhash: 62147c71ede99536f297725d3cdbc935
+    md5: d2a3533dcb3a80a7be7f7bfe0fb4442a
+work/INPUT/sw_flux_nir_dir_new.nc:
+  fullpath: /scratch/x77/db6174/025deg_inputs/flux_forced_3hourly_20yr_avg/sw_flux_nir_dir_new.nc
+  hashes:
+    binhash: a9080d3cdb7c6cbbd118cfbf973c9505
+    md5: 73dfe5d40c2807489f7c4febc939aeef
 work/INPUT/sw_flux_vis_dif.nc:
   fullpath: /scratch/x77/db6174/025deg_inputs/flux_forced_3hourly_20yr_avg/sw_flux_vis_dif.nc
   hashes:
