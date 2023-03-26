@@ -35,19 +35,6 @@
     clock_grain       = 'LOOP'
 /
 
-&mom_oasis3_interface_nml
-    fields_in         = 'u_flux', 'v_flux', 'lprec', 'fprec', 'salt_flx',
-                        'mh_flux', 'sw_flux', 'q_flux', 't_flux', 'lw_flux',
-                        'runof', 'p', 'aice', 'wfimelt', 'wfiform', 'licefw',
-                        'liceht'
-    fields_out        = 't_surf', 's_surf', 'u_surf', 'v_surf', 'dssldx',
-                        'dssldy', 'frazil'
-    num_fields_in     = 17
-    num_fields_out    = 7
-    send_after_ocean_update = .true.
-    send_before_ocean_update = .false.
-/
-
 &monin_obukhov_nml
 /
 
@@ -391,7 +378,15 @@
     use_this_module   = .false.
 /
 
-&ocean_solo_nml
+ &ocean_solo_nml
+    months = 24
+    days = 0
+    hours = 0
+    minutes = 0
+    seconds = 0
+    date_init = 2100, 1, 1, 0, 0, 0
+    calendar = 'noleap'
+    dt_cpld = 10800
 /
 
 &ocean_sponges_eta_nml
