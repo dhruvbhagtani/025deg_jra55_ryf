@@ -575,6 +575,10 @@
 &surface_flux_nml
 /
 
+&wind_mask_nml
+    use_this_module = .true.
+/
+
 &xgrid_nml
     interp_method     = 'second_order'
     make_exchange_reproduce = .false.
