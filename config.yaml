@@ -11,7 +11,7 @@ shortpath: /scratch/x77
 queue: normal
 ncpus: 1455
 walltime: 5:00:00
-jobname: 025deg_jra55_ryf
+jobname: pos10W
 
 # Model configuration
 model: mom
@@ -19,6 +19,8 @@ exe: /g/data/x77/db6174/MoM5/exec/nci/MOM_solo/fms_MOM_solo.x
 input: 
      - /g/data/ik11/inputs/access-om2/input_20201102/mom_025deg
      - /scratch/x77/db6174/3hourly_forcing_20yr_avg
+     - /scratch/x77/db6174/025deg_inputs/flux_forced_noKPP_pos10W
+     - /scratch/x77/db6174/025deg_inputs/flux_3hourly_forcing_20yr_avg_zero_heat
 
 # Collation
 collate:
